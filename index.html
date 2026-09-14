@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="retro">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Class portal for CSCI 3150 — assignments and about me.">
   <title>Your Name — CSCI 3150 Class Portal</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="min-h-screen bg-base-200">
@@ -14,6 +15,48 @@
      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:btn focus:btn-primary">
     Skip to main content
   </a>
+
+  <div class="navbar bg-base-100 shadow-sm">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg aria-label="Menu" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+        </div>
+        <ul
+          tabindex="-1"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+          <li><a href="#about">About Me</a></li>
+          <li>
+            <a>Assignments</a>
+            <ul class="p-2">
+              <li><a href="#" aria-label="Assignment 1, coming soon">Assignment 1 (coming soon)</a></li>
+              <li><a href="#" aria-label="Assignment 2, coming soon">Assignment 2 (coming soon)</a></li>
+              <li><a href="#" aria-label="Assignment 3, coming soon">Assignment 3 (coming soon)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <a href="index.html" class="btn btn-ghost text-xl">CSCI 3150 Portal</a>
+    </div>
+    <nav aria-label="Assignments" class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="#about">About Me</a></li>
+        <li>
+          <details>
+            <summary>Assignments</summary>
+            <ul class="p-2 bg-base-100 w-52 z-1">
+              <li><a href="#" aria-label="Assignment 1, coming soon">Assignment 1 (coming soon)</a></li>
+              <li><a href="#" aria-label="Assignment 2, coming soon">Assignment 2 (coming soon)</a></li>
+              <li><a href="#" aria-label="Assignment 3, coming soon">Assignment 3 (coming soon)</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+    <div class="navbar-end">
+      <span class="btn btn-ghost">Your Name</span>
+    </div>
+  </div>
 
   <header class="hero bg-primary text-primary-content">
     <div class="hero-content text-center">
@@ -24,19 +67,8 @@
     </div>
   </header>
 
-  <nav aria-label="Assignments" class="bg-base-100 shadow-sm">
-    <div class="mx-auto max-w-3xl px-4 py-4">
-      <h2 class="menu-title">Assignments</h2>
-      <ul class="menu menu-horizontal gap-2">
-        <li><a href="#" class="btn btn-primary btn-outline" aria-label="Assignment 1, coming soon">Assignment 1 (coming soon)</a></li>
-        <li><a href="#" class="btn btn-primary btn-outline" aria-label="Assignment 2, coming soon">Assignment 2 (coming soon)</a></li>
-        <li><a href="#" class="btn btn-primary btn-outline" aria-label="Assignment 3, coming soon">Assignment 3 (coming soon)</a></li>
-      </ul>
-    </div>
-  </nav>
-
   <main id="main-content" class="mx-auto max-w-3xl px-4 py-8">
-    <section aria-labelledby="about-heading" class="card bg-base-100 shadow-xl">
+    <section id="about" aria-labelledby="about-heading" class="card bg-base-100 shadow-xl">
       <div class="card-body">
         <h2 id="about-heading" class="card-title">About Me</h2>
         <p>
