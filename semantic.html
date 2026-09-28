@@ -1,16 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="lofi">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vertumnus (Arcimboldo)</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
         <link
             href="https://cdn.jsdelivr.net/npm/daisyui@5"
             rel="stylesheet"
             type="text/css"
-        >
+        />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.20/src/index.min.js"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <style type="text/tailwindcss">
+            @theme {
+                --font-title: "Public Sans", sans-serif;
+                --font-serif: "Noto Serif", serif;
+            }
+        </style>
     </head>
     <body>
         <a
@@ -25,7 +42,10 @@
             >
                 Vertumnus (Arcimboldo)
             </h1>
-            <nav class="order-1 navbar bg-base-100 shadow-sm" aria-labelledby="site-nav-heading">
+            <nav
+                class="order-1 navbar bg-base-100 shadow-sm"
+                aria-labelledby="site-nav-heading"
+            >
                 <h2 id="site-nav-heading" class="sr-only">Site navigation</h2>
                 <div class="navbar-start">
                     <details class="dropdown">
@@ -118,7 +138,7 @@
                             <img
                                 src="vertumnus.jpg.webp"
                                 alt="Vertumnus by Giuseppe Arcimboldo"
-                            >
+                            />
                         </figure>
                         <div class="card-body p-0">
                             <h2 class="card-title">Rudolf II as Vertumnus</h2>
@@ -366,5 +386,15 @@
                 </section>
             </article>
         </main>
+        <footer
+            class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4 mt-8"
+        >
+            <aside>
+                <h2 class="footer-title">CSCI 3150 - Paul Rodriguez</h2>
+                <p>
+                    Hiya!
+                </p>
+            </aside>
+        </footer>
     </body>
 </html>
