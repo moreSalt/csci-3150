@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en" data-theme="lofi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Giuseppe Arcimboldo, the Italian painter of portraits made from fruit, vegetables and flowers."
+        />
+        <title>Giuseppe Arcimboldo</title>
+        <link rel="icon" href="data:," />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_downward,send&display=block"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style>
+            body {
+                font-family: "Noto Serif", serif;
+            }
+            h1,
+            h2,
+            nav,
+            form,
+            .skip-link {
+                font-family: "Public Sans", sans-serif;
+            }
+
+            /* Skip link sits above the page and drops down when focused */
+            .skip-link {
+                position: absolute;
+                top: 0;
+                left: 1rem;
+                z-index: 100;
+                transform: translateY(-120%);
+                transition: transform 0.2s;
+            }
+            .skip-link:focus {
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#main" class="skip-link btn btn-primary rounded-t-none">
+            <span class="material-symbols-outlined" aria-hidden="true"
+                >arrow_downward</span
+            >
+            Skip to main content
+        </a>
+
+        <header class="flex flex-col">
+            <h1
+                id="page-title"
+                class="order-2 w-full max-w-4xl mx-auto px-4 text-3xl md:text-4xl font-bold my-8"
+            >
+                Giuseppe Arcimboldo
+            </h1>
+            <nav
+                class="order-1 navbar bg-base-100 shadow-sm"
+                aria-labelledby="site-nav-heading"
+            >
+                <h2 id="site-nav-heading" class="sr-only">Site navigation</h2>
+                <div class="navbar-start">
+                    <details class="dropdown">
+                        <summary
+                            class="btn btn-ghost lg:hidden"
+                            aria-label="Menu"
+                        >
+                            <svg
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16"
+                                />
+                            </svg>
+                        </summary>
+                        <ul
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                        >
+                            <li><a href="semantic.html">Semantic HTML</a></li>
+                            <li>
+                                <a href="accessible.html" aria-current="page"
+                                    >Accessible HTML</a
+                                >
+                            </li>
+                            <li><a href="#">Assignment 3</a></li>
+                        </ul>
+                    </details>
+                    <a href="index.html" class="btn btn-ghost text-xl"
+                        >CSCI 3150 - Paul Rodriguez</a
+                    >
+                </div>
+                <div class="navbar-end hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a href="semantic.html">Semantic HTML</a></li>
+                        <li>
+                            <a href="accessible.html" aria-current="page"
+                                >Accessible HTML</a
+                            >
+                        </li>
+                        <li><a href="#">Assignment 3</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main
+            id="main"
+            tabindex="-1"
+            class="w-full max-w-4xl mx-auto px-4 leading-relaxed"
+        >
+            <article aria-labelledby="about-heading">
+                <h2 id="about-heading" class="text-2xl font-bold mb-4">
+                    About the artist
+                </h2>
+                <figure class="md:float-right md:w-64 md:ml-6 mb-4">
+                    <img
+                        src="vertumnus.jpg.webp"
+                        width="960"
+                        height="1190"
+                        alt="Portrait of Emperor Rudolf II made entirely of fruits, vegetables and flowers."
+                    />
+                    <figcaption class="text-sm mt-2">
+                        <cite>Vertumnus</cite>,
+                        <abbr title="circa">c.</abbr> 1590–91
+                    </figcaption>
+                </figure>
+                <p class="mb-4">
+                    Giuseppe Arcimboldo (<time datetime="1527-04-05"
+                        >5 April 1527</time
+                    >
+                    – <time datetime="1593-07-11">11 July 1593</time>) was an
+                    Italian Mannerist painter best known for creating
+                    imaginative portraits in the shapes of human heads, though
+                    composed entirely of objects such as fruits, vegetables,
+                    flowers, fish and books.
+                </p>
+                <p class="mb-4">
+                    In <time datetime="1562">1562</time>, he became court
+                    portraitist to Ferdinand I at the Habsburg court in Vienna,
+                    and would hold the position under Maximilian II and Rudolf
+                    II at the court in Prague. His conventional work on
+                    religious subjects has fallen into oblivion, but his
+                    portraits of human heads made up of vegetables, plants,
+                    fruits, sea creatures and tree roots were greatly admired by
+                    his contemporaries and remain a source of fascination today.
+                </p>
+                <p class="mb-4">
+                    His works were rediscovered in the early 20th century by
+                    Surrealist artists such as Salvador Dalí.
+                </p>
+            </article>
+
+            <section aria-labelledby="works-heading" class="mt-8 clear-both">
+                <h2 id="works-heading" class="text-2xl font-bold mb-4">
+                    Where to see his work
+                </h2>
+                <div
+                    class="overflow-x-auto"
+                    tabindex="0"
+                    role="region"
+                    aria-labelledby="works-caption"
+                >
+                    <table class="table">
+                        <caption id="works-caption" class="text-left mb-2">
+                            Arcimboldo paintings and the collections that hold
+                            them
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Painting</th>
+                                <th scope="col">Year</th>
+                                <th scope="col">Collection</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Spring</th>
+                                <td>2026</td>
+                                <td>Museum of Modern Art, NYC</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Summer</th>
+                                <td>2026</td>
+                                <td>Amsterdam Museum of Art, Amsterdam</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Autumn</th>
+                                <td>2026</td>
+                                <td>Denver Museum of Art, Denver</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section aria-labelledby="contact-heading" class="mt-8 mb-8">
+                <h2 id="contact-heading" class="text-2xl font-bold mb-4">
+                    Ask a question
+                </h2>
+                <form action="accessible.html" method="get">
+                    <fieldset class="fieldset gap-4 max-w-md">
+                        <legend class="fieldset-legend">
+                            Your question (all fields required)
+                        </legend>
+                        <div>
+                            <label for="name" class="block mb-1">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                autocomplete="name"
+                                required
+                                class="input w-full"
+                            />
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                                aria-describedby="email-hint"
+                                class="input w-full"
+                            />
+                            <p id="email-hint" class="text-sm mt-1">
+                                Example: name@example.com
+                            </p>
+                        </div>
+                        <div>
+                            <label for="question" class="block mb-1"
+                                >Question</label
+                            >
+                            <textarea
+                                id="question"
+                                name="question"
+                                rows="4"
+                                required
+                                class="textarea w-full"
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-fit">
+                            <span
+                                class="material-symbols-outlined"
+                                aria-hidden="true"
+                                >send</span
+                            >
+                            Send
+                        </button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+
+        <footer
+            class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4"
+        >
+            <div>
+                <p>
+                    Text adapted from
+                    <a
+                        href="https://en.wikipedia.org/wiki/Giuseppe_Arcimboldo"
+                        class="link"
+                        >Wikipedia</a
+                    >.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
