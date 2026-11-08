@@ -143,6 +143,7 @@ img {
 /* Nav list: 1D flexbox, vertical and thumb-able on mobile */
 .site-nav {
     background: var(--ink);
+    color: var(--paper);
 }
 
 .site-nav ul {
