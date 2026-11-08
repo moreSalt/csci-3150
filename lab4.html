@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="A responsive multicolumn page about the painter Giuseppe Arcimboldo, built with CSS grid areas and flexbox."
+        />
+        <title>Lab 4: Accessible CSS Layout - Paul Rodriguez</title>
+        <link rel="icon" href="data:," />
+        <link href="lab4.css" rel="stylesheet" />
+    </head>
+    <body>
+        <a href="#main" class="skip-link">Skip to main content</a>
+
+        <header class="site-header">
+            <h1>Giuseppe Arcimboldo</h1>
+            <p>Lab 4: Accessible CSS Layout</p>
+        </header>
+
+        <nav class="site-nav" aria-labelledby="site-nav-heading">
+            <h2 id="site-nav-heading" class="visually-hidden">
+                Site navigation
+            </h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="semantic.html">Lab 2: Web Page Basics</a></li>
+                <li><a href="accessible.html">Lab 3: Tables &amp; Forms</a></li>
+                <li>
+                    <a href="lab4.html" aria-current="page"
+                        >Lab 4: Accessible CSS Layout</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <main id="main" tabindex="-1" aria-labelledby="about-heading">
+            <h2 id="about-heading">About the artist</h2>
+            <p>
+                Giuseppe Arcimboldo (<time datetime="1527-04-05"
+                    >5 April 1527</time
+                >
+                – <time datetime="1593-07-11">11 July 1593</time>) was an
+                Italian Mannerist painter best known for creating imaginative
+                portraits in the shapes of human heads, though composed entirely
+                of objects such as fruits, vegetables, flowers, fish and books.
+            </p>
+            <p>
+                In <time datetime="1562">1562</time>, he became court
+                portraitist to Ferdinand I at the Habsburg court in Vienna, and
+                would hold the position under Maximilian II and Rudolf II at the
+                court in Prague. His conventional work on religious subjects has
+                fallen into oblivion, but his portraits of human heads made up
+                of vegetables, plants, fruits, sea creatures and tree roots were
+                greatly admired by his contemporaries and remain a source of
+                fascination today.
+            </p>
+            <p>
+                His works were rediscovered in the early 20th century by
+                Surrealist artists such as Salvador Dalí.
+            </p>
+        </main>
+
+        <aside class="aside-art" aria-labelledby="art-heading">
+            <h2 id="art-heading">Rudolf II as Vertumnus</h2>
+            <img
+                src="vertumnus.jpg.webp"
+                width="960"
+                height="1190"
+                alt="Portrait of Emperor Rudolf II made entirely of fruits, vegetables and flowers."
+            />
+            <dl>
+                <div>
+                    <dt>Year</dt>
+                    <dd>1591</dd>
+                </div>
+                <div>
+                    <dt>Medium</dt>
+                    <dd>Oil on panel</dd>
+                </div>
+                <div>
+                    <dt>Location</dt>
+                    <dd>Skokloster Castle, Sweden</dd>
+                </div>
+            </dl>
+        </aside>
+
+        <aside class="aside-style" aria-labelledby="style-heading">
+            <h2 id="style-heading">Mannerism</h2>
+            <p>
+                Mannerism is a particular art style that lasted from the 1530s
+                to the 1600s. Mannerist artists focused on greatly displaying
+                their technique, their exaggeration of figures, and decorative
+                elements resulting in extremely stylized and hyperbolic pieces.
+            </p>
+        </aside>
+
+        <footer class="site-footer">
+            <p>
+                CSCI 3150 - Paul Rodriguez. Text adapted from
+                <a href="https://en.wikipedia.org/wiki/Giuseppe_Arcimboldo"
+                    >Wikipedia</a
+                >.
+            </p>
+        </footer>
+    </body>
+</html>

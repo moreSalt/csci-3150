@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400..700;1,400..700&family=Public+Sans:wght@400..700&display=swap");
+
+/* Five-color scheme. Swap these values to change the whole page. */
+:root {
+    --ink: #2b2118;
+    --paper: #fbf6ec;
+    --leaf: #2f5d3a;
+    --fruit: #9b2c1f;
+    --straw: #ebd9a8;
+
+    --font-body: "Noto Serif", serif;
+    --font-heading: "Public Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Overall 2D layout: mobile first, one column in DOM order */
+body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "art"
+        "style"
+        "footer";
+    min-height: 100vh;
+    max-width: 80rem;
+    margin: 0 auto;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+}
+
+.site-header {
+    grid-area: header;
+}
+.site-nav {
+    grid-area: nav;
+}
+main {
+    grid-area: main;
+}
+.aside-art {
+    grid-area: art;
+}
+.aside-style {
+    grid-area: style;
+}
+.site-footer {
+    grid-area: footer;
+}
+
+.site-header,
+.site-nav,
+main,
+.aside-art,
+.aside-style,
+.site-footer {
+    padding: 1.25rem;
+}
+
+/* Typography */
+h1,
+h2,
+.site-nav,
+.skip-link {
+    font-family: var(--font-heading);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.375rem;
+    line-height: 1.3;
+}
+
+p {
+    margin: 0 0 1rem;
+    max-width: 70ch;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Regions */
+.site-header {
+    background: var(--leaf);
+    color: var(--paper);
+}
+
+.site-header p {
+    margin: 0.25rem 0 0;
+}
+
+.aside-art,
+.aside-style {
+    background: var(--straw);
+}
+
+.aside-art dl {
+    margin: 1rem 0 0;
+}
+
+.aside-art dt {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.aside-art dd {
+    margin: 0 0 0.5rem;
+}
+
+.site-footer {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.site-footer p {
+    margin: 0;
+    max-width: none;
+}
+
+.site-footer a {
+    color: var(--straw);
+}
+
+/* Nav list: 1D flexbox, vertical and thumb-able on mobile */
+.site-nav {
+    background: var(--ink);
+}
+
+.site-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 3rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--paper);
+    border-radius: 0.5rem;
+    color: var(--paper);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+.site-nav a[aria-current="page"] {
+    background: var(--straw);
+    border-color: var(--straw);
+    color: var(--ink);
+}
+
+/* Accessibility helpers */
+main:focus {
+    outline: none;
+}
+
+a {
+    color: var(--fruit);
+}
+
+a:focus-visible {
+    outline: 3px solid var(--fruit);
+    outline-offset: 2px;
+}
+
+.site-nav a:focus-visible,
+.site-footer a:focus-visible {
+    outline-color: var(--paper);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    z-index: 10;
+    padding: 0.75rem 1rem;
+    background: var(--paper);
+    color: var(--ink);
+    font-weight: 700;
+    transform: translateY(-120%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+/* Tablet: main spans the page, asides sit side by side beneath it */
+@media (min-width: 40rem) {
+    body {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "main main"
+            "art style"
+            "footer footer";
+    }
+
+    .site-nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* Desktop: three columns with main in the center */
+@media (min-width: 64rem) {
+    body {
+        grid-template-columns: minmax(14rem, 1fr) minmax(0, 2.5fr) minmax(14rem, 1fr);
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header header header"
+            "nav nav nav"
+            "art main style"
+            "footer footer footer";
+    }
+}

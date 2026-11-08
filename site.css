@@ -1,0 +1,28 @@
+/* Shared by the portal, Lab 2 and Lab 3 pages. Lab 4 has its own stylesheet. */
+
+body {
+    font-family: "Noto Serif", serif;
+}
+
+h1,
+h2,
+h3,
+nav,
+form,
+.skip-link {
+    font-family: "Public Sans", sans-serif;
+}
+
+/* Skip link sits above the page and drops down when focused */
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    z-index: 100;
+    transform: translateY(-120%);
+    transition: transform 0.2s;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}

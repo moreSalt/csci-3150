@@ -1,20 +1,51 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="lofi">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Paul Rodriguez's class portal for CSCI 3150, with an about-me section and links to coding labs."
+        />
         <title>CSCI 3150 - Paul Rodriguez</title>
+        <link rel="icon" href="data:," />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
         <link
             href="https://cdn.jsdelivr.net/npm/daisyui@5"
             rel="stylesheet"
             type="text/css"
         />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+            rel="stylesheet"
+            type="text/css"
+        />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link href="site.css" rel="stylesheet" />
     </head>
     <body>
-        <header>
-            <nav class="navbar bg-base-100 shadow-sm">
-                <div class="navbar-start">
+        <a href="#main" class="skip-link btn btn-primary rounded-t-none"
+            >Skip to main content</a
+        >
+
+        <header class="flex flex-col">
+            <h1
+                id="page-title"
+                class="order-2 w-full max-w-4xl mx-auto px-4 text-3xl md:text-4xl font-bold my-8"
+            >
+                Hi, I'm Paul
+            </h1>
+            <nav
+                class="order-1 navbar bg-base-100 shadow-sm"
+                aria-labelledby="site-nav-heading"
+            >
+                <h2 id="site-nav-heading" class="sr-only">Site navigation</h2>
+                <div class="navbar-start lg:w-auto">
                     <details class="dropdown">
                         <summary
                             class="btn btn-ghost lg:hidden"
@@ -39,31 +70,66 @@
                         <ul
                             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
                         >
-                            <li><a href="semantic.html">Semantic HTML</a></li>
-                            <li><a href="accessible.html">Accessible HTML</a></li>
-                            <li><a href="#">Assignment 3</a></li>
+                            <li><a href="semantic.html">Lab 2: Web Page Basics</a></li>
+                            <li><a href="accessible.html">Lab 3: Tables &amp; Forms</a></li>
+                            <li><a href="lab4.html">Lab 4: Accessible CSS Layout</a></li>
                         </ul>
                     </details>
-                    <a href="index.html" class="btn btn-ghost text-xl"
+                    <a
+                        href="index.html"
+                        class="btn btn-ghost text-xl"
+                        aria-current="page"
                         >CSCI 3150 - Paul Rodriguez</a
                     >
                 </div>
-                <div class="navbar-end hidden lg:flex">
+                <div class="navbar-end hidden lg:flex lg:w-auto lg:grow">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a href="semantic.html">Semantic HTML</a></li>
-                        <li><a href="accessible.html">Accessible HTML</a></li>
-                        <li><a href="#">Assignment 3</a></li>
+                        <li><a href="semantic.html">Lab 2: Web Page Basics</a></li>
+                        <li><a href="accessible.html">Lab 3: Tables &amp; Forms</a></li>
+                        <li><a href="lab4.html">Lab 4: Accessible CSS Layout</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
-        <main id="main" tabindex="-1" class="flex p-6 w-full justify-center">
-            <div class="card w-96 bg-base-100 card-lg shadow-sm">
-                <div class="card-body">
-                    <h1 class="card-title">Hi, I'm Paul</h1>
-                    <p>I am a senior CS major at CU Boulder.</p>
+
+        <main
+            id="main"
+            tabindex="-1"
+            class="w-full max-w-4xl mx-auto px-4 leading-relaxed"
+        >
+            <section
+                aria-labelledby="about-heading"
+                class="grid gap-6 md:grid-cols-[auto_1fr] items-start mb-8"
+            >
+                <img
+                    src="headshot.jpg"
+                    width="160"
+                    height="160"
+                    class="size-40 rounded-full object-cover"
+                    alt="Avatar of Paul Rodriguez."
+                />
+                <div>
+                    <h2 id="about-heading" class="text-2xl font-bold mb-4">
+                        About me
+                    </h2>
+                    <p class="mb-4">
+                        I am a senior CS major at CU Boulder. I chose CS because I really enjoyed coding all day and night. I enjoy backend development.
+                    </p>
+                    <p class="mb-4">
+                        This site is my portal for CSCI 3150, where I post my
+                        coding labs. Building it has taught me to write semantic
+                        HTML and to test pages for accessibility. My goal after graduation is to find a master Shifu. Outside of school I like to snowboard, climb and rave.
+                    </p>
                 </div>
-            </div>
+            </section>
         </main>
+
+        <footer
+            class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4"
+        >
+            <div>
+                <p>CSCI 3150 - Paul Rodriguez</p>
+            </div>
+        </footer>
     </body>
 </html>

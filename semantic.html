@@ -3,7 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Vertumnus, Giuseppe Arcimboldo's 1591 portrait of Emperor Rudolf II made of fruits, vegetables and flowers."
+        />
         <title>Vertumnus (Arcimboldo)</title>
+        <link rel="icon" href="data:," />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -16,29 +21,21 @@
             type="text/css"
         />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.20/src/index.min.js"></script>
         <link
             href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
             rel="stylesheet"
             type="text/css"
         />
-        <style type="text/tailwindcss">
-            @theme {
-                --font-title: "Public Sans", sans-serif;
-                --font-serif: "Noto Serif", serif;
-            }
-        </style>
+        <link href="site.css" rel="stylesheet" />
     </head>
     <body>
-        <a
-            href="#main"
-            class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 link"
+        <a href="#main" class="skip-link btn btn-primary rounded-t-none"
             >Skip to main content</a
         >
         <header class="flex flex-col">
             <h1
                 id="page-title"
-                class="order-2 w-full max-w-4xl mx-auto font-title text-2xl md:text-3xl lg:text-4xl font-bold my-8"
+                class="order-2 w-full max-w-4xl mx-auto px-4 text-2xl md:text-3xl lg:text-4xl font-bold my-8"
             >
                 Vertumnus (Arcimboldo)
             </h1>
@@ -47,7 +44,7 @@
                 aria-labelledby="site-nav-heading"
             >
                 <h2 id="site-nav-heading" class="sr-only">Site navigation</h2>
-                <div class="navbar-start">
+                <div class="navbar-start lg:w-auto">
                     <details class="dropdown">
                         <summary
                             class="btn btn-ghost lg:hidden"
@@ -72,32 +69,32 @@
                         <ul
                             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
                         >
-                            <li><a href="semantic.html">Semantic HTML</a></li>
-                            <li><a href="accessible.html">Accessible HTML</a></li>
-                            <li><a href="#">Assignment 3</a></li>
+                            <li><a href="semantic.html" aria-current="page">Lab 2: Web Page Basics</a></li>
+                            <li><a href="accessible.html">Lab 3: Tables &amp; Forms</a></li>
+                            <li><a href="lab4.html">Lab 4: Accessible CSS Layout</a></li>
                         </ul>
                     </details>
                     <a href="index.html" class="btn btn-ghost text-xl"
                         >CSCI 3150 - Paul Rodriguez</a
                     >
                 </div>
-                <div class="navbar-end hidden lg:flex">
+                <div class="navbar-end hidden lg:flex lg:w-auto lg:grow">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a href="semantic.html">Semantic HTML</a></li>
-                        <li><a href="accessible.html">Accessible HTML</a></li>
-                        <li><a href="#">Assignment 3</a></li>
+                        <li><a href="semantic.html" aria-current="page">Lab 2: Web Page Basics</a></li>
+                        <li><a href="accessible.html">Lab 3: Tables &amp; Forms</a></li>
+                        <li><a href="lab4.html">Lab 4: Accessible CSS Layout</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main
             id="main"
-            aria-labelledby="page-title"
+            tabindex="-1"
             class="w-full flex flex-col items-center"
         >
             <article
                 aria-labelledby="article-heading"
-                class="w-full max-w-4xl flex flex-col font-serif"
+                class="w-full max-w-4xl flex flex-col gap-6 px-4 leading-relaxed"
             >
                 <h2 id="article-heading" class="sr-only">
                     Vertumnus (Arcimboldo)
@@ -129,21 +126,28 @@
                     </ul>
                 </nav>
 
-                <div class="flex gap-8 w-full">
+                <div class="flex flex-col md:flex-row gap-8 w-full">
                     <aside
                         aria-label="Artwork details"
-                        class="card w-72 shrink-0"
+                        class="card w-full md:w-72 shrink-0"
                     >
                         <figure>
                             <img
                                 src="vertumnus.jpg.webp"
-                                alt="Vertumnus by Giuseppe Arcimboldo"
+                                width="960"
+                                height="1190"
+                                alt="Portrait of Emperor Rudolf II made entirely of fruits, vegetables and flowers."
                             />
                         </figure>
                         <div class="card-body p-0">
                             <h2 class="card-title">Rudolf II as Vertumnus</h2>
-                            <div class="overflow-x-auto">
-                                <table class="table table-xs">
+                            <div
+                                class="overflow-x-auto"
+                                tabindex="0"
+                                role="region"
+                                aria-label="Artwork details table"
+                            >
+                                <table class="table table-sm">
                                     <tbody>
                                         <tr>
                                             <th scope="row">Artist</th>
@@ -194,13 +198,13 @@
                 <section aria-labelledby="historical-context">
                     <h2
                         id="historical-context"
-                        class="mt-4 font-title text-xl md:text-2xl lg:text-3xl font-bold"
+                        class="mt-4 text-xl md:text-2xl lg:text-3xl font-bold"
                     >
                         Historical context
                     </h2>
                     <div class="divider"></div>
                     <h3
-                        class="mt-4 mb-2 font-title text-lg md:text-xl lg:text-2xl font-bold"
+                        class="mt-4 mb-2 text-lg md:text-xl lg:text-2xl font-bold"
                     >
                         Holy Roman Emperor Rudolf II
                     </h3>
@@ -241,13 +245,13 @@
                 <section aria-labelledby="style">
                     <h2
                         id="style"
-                        class="mt-4 font-title text-xl md:text-2xl lg:text-3xl font-bold"
+                        class="mt-4 text-xl md:text-2xl lg:text-3xl font-bold"
                     >
                         Style
                     </h2>
                     <div class="divider"></div>
                     <h3
-                        class="mt-4 mb-2 font-title text-lg md:text-xl lg:text-2xl font-bold"
+                        class="mt-4 mb-2 text-lg md:text-xl lg:text-2xl font-bold"
                     >
                         Theme
                     </h3>
@@ -264,7 +268,7 @@
                         which drew on much of his experience in the royal court.
                     </p>
                     <h3
-                        class="mt-4 mb-2 font-title text-lg md:text-xl lg:text-2xl font-bold"
+                        class="mt-4 mb-2 text-lg md:text-xl lg:text-2xl font-bold"
                     >
                         Mannerism
                     </h3>
@@ -286,7 +290,7 @@
                 <section aria-labelledby="fruits-vegetables-and-flowers">
                     <h2
                         id="fruits-vegetables-and-flowers"
-                        class="mt-4 font-title text-xl md:text-2xl lg:text-3xl font-bold"
+                        class="mt-4 text-xl md:text-2xl lg:text-3xl font-bold"
                     >
                         Fruits, vegetables and flowers
                     </h2>
@@ -320,7 +324,7 @@
                 <section aria-labelledby="interpretations">
                     <h2
                         id="interpretations"
-                        class="mt-4 font-title text-xl md:text-2xl lg:text-3xl font-bold"
+                        class="mt-4 text-xl md:text-2xl lg:text-3xl font-bold"
                     >
                         Interpretations
                     </h2>
@@ -355,7 +359,7 @@
                 <section aria-labelledby="provenance">
                     <h2
                         id="provenance"
-                        class="mt-4 font-title text-xl md:text-2xl lg:text-3xl font-bold"
+                        class="mt-4 text-xl md:text-2xl lg:text-3xl font-bold"
                     >
                         Provenance
                     </h2>
@@ -389,12 +393,10 @@
         <footer
             class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4 mt-8"
         >
-            <aside>
-                <h2 class="footer-title">CSCI 3150 - Paul Rodriguez</h2>
-                <p>
-                    Hiya!
-                </p>
-            </aside>
+            <div>
+                <p class="footer-title opacity-100">CSCI 3150 - Paul Rodriguez</p>
+                <p>Hiya!</p>
+            </div>
         </footer>
     </body>
 </html>
