@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" data-theme="zine">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Design for Everybody: a zine-style guide to universal design for the next generation of web designers and developers."
+        />
+        <title>Design for Everybody - Universal Design for the Next Web</title>
+        <link rel="icon" href="data:," />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400..700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link href="final.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- HEADER START -->
+        <a href="#main" class="skip-link btn btn-neutral rounded-none"
+            >Skip to main content</a
+        >
+
+        <header class="border-b-[3px] border-base-content bg-base-100">
+            <nav
+                class="navbar mx-auto max-w-6xl px-4"
+                aria-labelledby="site-nav-heading"
+            >
+                <h2 id="site-nav-heading" class="sr-only">Site navigation</h2>
+                <div class="navbar-start w-auto grow">
+                    <a
+                        href="index.html"
+                        class="font-display text-xl uppercase leading-none no-underline sm:text-2xl"
+                        ><span class="bg-primary px-1">Design</span> for
+                        Everybody</a
+                    >
+                </div>
+                <div class="navbar-end w-auto">
+                    <details class="dropdown dropdown-end lg:hidden">
+                        <summary class="btn btn-neutral" aria-label="Menu">
+                            <svg
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="square"
+                                    stroke-width="3"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                            Menu
+                        </summary>
+                        <ul
+                            class="menu dropdown-content zine-box z-10 mt-3 w-60 bg-base-100 p-2 text-base"
+                        >
+                            <!-- NAV ITEMS -->
+                            <li><a href="index.html" aria-current="page">Home</a></li>
+                            <li><a href="why.html">Why</a></li>
+                            <li><a href="what.html">What</a></li>
+                            <li><a href="how.html">How</a></li>
+                            <li><a href="meta.html">Behind this site</a></li>
+                            <li><a href="../index.html">&larr; Class portal</a></li>
+                            <!-- /NAV ITEMS -->
+                        </ul>
+                    </details>
+                    <ul
+                        class="menu menu-horizontal hidden gap-1 px-1 text-base font-bold lg:flex"
+                    >
+                        <!-- NAV ITEMS -->
+                        <li><a href="index.html" aria-current="page">Home</a></li>
+                        <li><a href="why.html">Why</a></li>
+                        <li><a href="what.html">What</a></li>
+                        <li><a href="how.html">How</a></li>
+                        <li><a href="meta.html">Behind this site</a></li>
+                        <li><a href="../index.html">&larr; Class portal</a></li>
+                        <!-- /NAV ITEMS -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- HEADER END -->
+
+        <main id="main" tabindex="-1">
+            <section
+                aria-labelledby="page-title"
+                class="relative overflow-hidden border-b-[3px] border-base-content"
+            >
+                <div
+                    class="halftone absolute inset-y-0 right-0 hidden w-1/3 opacity-20 md:block"
+                    aria-hidden="true"
+                ></div>
+                <div class="relative mx-auto max-w-6xl px-4 py-12 md:py-20">
+                    <p class="sticker mb-6">A zine for people who build the web</p>
+                    <h1 id="page-title" class="poster-title max-w-4xl">
+                        The web is for
+                        <span class="highlight">everybody.</span>
+                        Build it like you mean it.
+                    </h1>
+                    <p class="mt-6 max-w-2xl text-lg md:text-xl">
+                        Universal design means making things that work for as
+                        many people as possible, without bolting on fixes
+                        later. Making things inclusive is the job, not an extra
+                        feature. Here's why it matters, what it is, and how to
+                        build it.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a
+                            href="why.html"
+                            class="btn btn-primary btn-lg zine-box rounded-none"
+                            >Start with why</a
+                        >
+                        <a
+                            href="how.html"
+                            class="btn btn-lg btn-outline rounded-none border-[3px]"
+                            >Skip to the code</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <!-- The banner only moves once final.js starts it, and the
+                 button lets anyone stop it (WCAG 2.2.2 Pause, Stop, Hide). -->
+            <div class="ticker-wrap">
+                <div class="ticker" aria-hidden="true">
+                    <div class="ticker__track font-display text-lg uppercase">
+                        <span class="px-6">Nothing about us without us</span> ★
+                        <span class="px-6">Semantic HTML first</span> ★
+                        <span class="px-6">Contrast is not optional</span> ★
+                        <span class="px-6">Mobile first, everyone first</span> ★
+                        <span class="px-6">Test with real people</span> ★
+                        <span class="px-6">Nothing about us without us</span> ★
+                        <span class="px-6">Semantic HTML first</span> ★
+                        <span class="px-6">Contrast is not optional</span> ★
+                        <span class="px-6">Mobile first, everyone first</span> ★
+                        <span class="px-6">Test with real people</span> ★
+                    </div>
+                </div>
+                <button type="button" class="ticker-toggle" hidden>
+                    Pause banner
+                </button>
+            </div>
+
+            <section
+                aria-labelledby="sections-heading"
+                class="mx-auto max-w-6xl px-4 py-12 md:py-16"
+            >
+                <h2 id="sections-heading" class="section-title mb-8">
+                    Three things to know
+                </h2>
+                <ul class="grid gap-8 md:grid-cols-3">
+                    <li>
+                        <a href="why.html" class="zine-card h-full bg-primary">
+                            <span class="font-display text-5xl" aria-hidden="true"
+                                >01</span
+                            >
+                            <h3 class="text-3xl uppercase">Why</h3>
+                            <p>
+                                About 1 in 4 U.S. adults has a disability, and
+                                everyone hits a situational barrier at some
+                                point. This is the case for designing for all
+                                of them.
+                            </p>
+                            <span class="card-cta">Make the case</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="what.html"
+                            class="zine-card h-full bg-secondary text-secondary-content"
+                        >
+                            <span class="font-display text-5xl" aria-hidden="true"
+                                >02</span
+                            >
+                            <h3 class="text-3xl uppercase">What</h3>
+                            <p>
+                                The 7 principles of universal design, Norman's
+                                design concepts and WCAG's POUR, explained
+                                without the jargon.
+                            </p>
+                            <span class="card-cta">Learn the ideas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="how.html"
+                            class="zine-card h-full bg-accent text-accent-content"
+                        >
+                            <span class="font-display text-5xl" aria-hidden="true"
+                                >03</span
+                            >
+                            <h3 class="text-3xl uppercase">How</h3>
+                            <p>
+                                Semantic HTML, legible CSS, responsive layouts,
+                                keyboard support and testing: the techniques
+                                you can use in your next project.
+                            </p>
+                            <span class="card-cta">Get building</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section
+                aria-labelledby="meta-heading"
+                class="border-t-[3px] border-base-content bg-base-200"
+            >
+                <div
+                    class="mx-auto grid max-w-6xl items-center gap-6 px-4 py-12 md:grid-cols-[1fr_auto]"
+                >
+                    <div>
+                        <p class="sticker sticker--pink mb-4">Practice what you preach</p>
+                        <h2 id="meta-heading" class="section-title">
+                            This site follows its own advice
+                        </h2>
+                        <p class="mt-4 max-w-2xl">
+                            It was built mobile first, uses a high-contrast
+                            palette checked against WCAG AA, works with only a
+                            keyboard, and passes an automated accessibility
+                            checker. Screen reader testing is next, and the
+                            results will go on the Behind this site page.
+                        </p>
+                    </div>
+                    <a
+                        href="meta.html"
+                        class="btn btn-neutral btn-lg rounded-none"
+                        >Behind this site</a
+                    >
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER START -->
+        <footer class="bg-neutral text-neutral-content">
+            <div
+                class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 sm:flex-row sm:items-center sm:justify-between"
+            >
+                <p class="font-display uppercase">Design for Everybody</p>
+                <p>
+                    A CSCI 3150 Universal Design final project by Paul
+                    Rodriguez.
+                    <a href="../index.html" class="underline">Back to the class portal</a>
+                </p>
+            </div>
+        </footer>
+        <!-- FOOTER END -->
+        <script src="final.js" defer></script>
+    </body>
+</html>

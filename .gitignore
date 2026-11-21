@@ -1,0 +1,8 @@
+# Canvas course exports (zip and any unzipped copy)
+ATLS-CSCI 3150 Universal Design Fall 2026/
+*.zip
+
+# Content map (submitted on Canvas as a PDF, not part of the site)
+content-map.md
+
+.DS_Store
